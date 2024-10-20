@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="game">
+            <div class="board">
+                <div class="row">
+                <div class="cell cell0" data-index="0"></div>
+                <div class="cell cell1" data-index="1"></div>
+                <div class="cell cell2" data-index="2"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell3" data-index="3"></div>
+                <div class="cell cell4" data-index="4"></div>
+                <div class="cell cell5" data-index="5"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell6" data-index="6"></div>
+                <div class="cell cell7" data-index="7"></div>
+                <div class="cell cell8" data-index="8"></div>
+            </div>
+            </div>
+        </div>
+        <div id="scoreboard">
+            <div class="playerX">
+                <h2>competitor A</h2>
+                <h3 class="count countX">0</h3>
+            </div>
+            <div class="tie">
+                <h2>TIE</h2>
+                <h3 class="count countT">0</h3>
+            </div>
+            <div class="playerY">
+                <h2>competitor B</h2>
+                <h3 class="count countY">0</h3>
+            </div>
+            <!-- <div class="type">
+                <h2><i class="ri-user-fill"></i></h2>
+                <h3 class="count"></h3>
+            </div> -->
+        </div>
+        <div class="reset">
+            <button class="reset-btn">Reset</button>
+        </div>
+        <div class="new">
+            <button class="new-btn">New Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
