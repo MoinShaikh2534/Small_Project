@@ -44,6 +44,7 @@ html, body {
     to { opacity: 1; }
 }
 
+/* Game and Board Styling */
 .game {
     width: 100%;
     max-width: 450px;
@@ -96,6 +97,7 @@ html, body {
     color: #ffeb3b;
 }
 
+/* Scoreboard Styling */
 #scoreboard {
     height: 80px;
     width: 100%;
@@ -135,39 +137,74 @@ html, body {
     color: #ffffffc7;
 }
 
-/* Reset and New Game Button Styling */
-.new .new-btn, .reset .reset-btn {
+/* New Game Button Styling */
+.new .new-btn {
     margin-top: 20px;
     padding: 0.5vw 2vw;
     border: none;
     border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #ffeb3b;
-    color: #121212;
+    background-color: #4caf50;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 1.5s infinite;
+}
+
+.new .new-btn:hover {
+    background-color: #66bb6a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.new .new-btn:active {
+    animation: shake 0.2s ease;
+}
+
+/* Reset Button Styling */
+.reset .reset-btn {
+    margin-top: 20px;
+    padding: 0.5vw 2vw;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #f44336;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     animation: pulse 1.5s infinite;
 }
 
-.new .new-btn:hover, .reset .reset-btn:hover {
-    background-color: #fdd835;
+.reset .reset-btn:hover {
+    background-color: #e57373;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-.new .new-btn:active, .reset .reset-btn:active {
+.reset .reset-btn:active {
     animation: shake 0.2s ease;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
-        box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
     50% {
         transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     }
 }
 
