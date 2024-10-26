@@ -1,170 +1,150 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+html, body {
     height: 100%;
     width: 100%;
-    background-color: hsl(117, 71%, 38%);
+    background: linear-gradient(135deg, hsl(117, 71%, 38%), hsl(117, 40%, 30%));
     color: #121212;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#main{
+#main {
     height: 100%;
     width: 100%;
-    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* gap: 3vw; */
+    gap: 2vh;
+    transition: all 0.3s ease-in-out;
 }
 
-.game{
-    /* position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
+.game {
     height: 450px;
     width: 450px;
-    /* background-color: #fff; */
+    background-color: #ffffff20;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.board{
+.game:hover {
+    transform: scale(1.05);
+}
+
+.board {
     height: 100%;
     width: 100%;
-    /* background-color: #fff; */
 }
 
-.row{
+.row {
     height: calc(100% / 3);
     width: 100%;
-    /* background-color: red; */
-    /* border-bottom: 3px solid #000; */
     display: flex;
 }
-.row>div{
+.row > div {
     height: 100%;
     width: calc(100% / 3);
-    /* background-color: aqua; */
     border: 2px solid #f3efef;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+.row > div:hover {
+    background-color: #ffffff30;
+    transform: scale(1.1);
 }
 
-.row .cell0{
-    border-top: none;
-    border-left: none;
-}
-.row .cell1{
-    border-top: none;
-}
-.row .cell2{
-    border-top: none;
-    border-right: none;
-}
-.row .cell3{
-    border-left: none;
-}
-.row .cell5{
-    border-right: none;
-}
-.row .cell6{
-    border-left: none;
-    border-bottom: none;
-}
-.row .cell7{
-    border-bottom: none;
-}
-.row .cell8{
-    border-bottom: none;
-    border-right: none;
-}
-
-.cell{
+.cell {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 7rem;
+    color: #fff;
     user-select: none;
+    transition: color 0.3s ease;
+}
+.cell:hover {
+    color: #ffeb3b;
 }
 
-#scoreboard{
+#scoreboard {
     height: 100px;
     width: 500px;
-    /* background-color: #fff; */
     display: flex;
-    padding: 0vw 1vw;
+    padding: 1vw 2vw;
+    background-color: #ffffff20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-#scoreboard div{
+#scoreboard div {
     height: 100%;
     width: calc(100% / 3);
-    /* background-color: red; */
-    /* border: 2px solid #fff; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    transition: transform 0.3s ease;
 }
-#scoreboard h2{
+#scoreboard div:hover {
+    transform: scale(1.1);
+}
+
+#scoreboard h2 {
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
+    color: #ffffff;
 }
 
-#scoreboard .count{
+#scoreboard .count {
     font-weight: 400;
+    color: #ffffffc7;
 }
 
-.new .new-btn, .reset .reset-btn{
+.new .new-btn, .reset .reset-btn {
     margin-top: 20px;
-    padding: 0.4vw 1.8vw;
+    padding: 0.5vw 2vw;
     border: none;
     border-radius: 14px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
+    background-color: #ffeb3b;
+    color: #121212;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-@media (max-width:768px) {
-    #main{
+.new .new-btn:hover, .reset .reset-btn:hover {
+    background-color: #fdd835;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #main {
         gap: 4vh;
     }
-    .game{
-        /* position: absolute;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%,-50%); */
+    .game {
         height: 330px;
         width: 330px;
-        /* background-color: #fff; */
     }
-    
-    .board{
-        height: 100%;
-        width: 100%;
-        /* background-color: #fff; */
-    }
-    .cell{
+    .cell {
         font-size: 5rem;
         font-weight: 500;
     }
-    #scoreboard{
+    #scoreboard {
         height: 100px;
         width: 350px;
     }
-    #scoreboard h2{
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        font-weight: 600;
-        cursor: pointer;
-    }
-    .new .new-btn, .reset .reset-btn{
-        margin-top: 20px;
-        padding: 2vw 8vw;
-        border: none;
-        border-radius: 14px;
+    .new .new-btn, .reset .reset-btn {
+        padding: 2vw 6vw;
         font-size: 1rem;
-        font-weight: 700;
     }
 }
