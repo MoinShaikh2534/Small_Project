@@ -145,7 +145,7 @@ html, body {
     border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #4caf50;
+    background-color: #4caf50; /* Green color */
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -158,10 +158,6 @@ html, body {
     transform: translateY(-3px);
 }
 
-.new .new-btn:active {
-    animation: shake 0.2s ease;
-}
-
 /* Reset Button Styling */
 .reset .reset-btn {
     margin-top: 20px;
@@ -170,7 +166,7 @@ html, body {
     border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #f44336;
+    background-color: #f44336; /* Red color */
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -181,10 +177,6 @@ html, body {
     background-color: #e57373;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
-}
-
-.reset .reset-btn:active {
-    animation: shake 0.2s ease;
 }
 
 /* Animations */
@@ -205,56 +197,5 @@ html, body {
     50% {
         transform: scale(1.05);
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    }
-}
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
-    100% { transform: translateX(0); }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    #header {
-        font-size: 1.8rem;
-    }
-    .game {
-        width: 100%;
-        max-width: 330px;
-        height: auto;
-    }
-    .cell {
-        font-size: 5rem;
-        font-weight: 500;
-    }
-    #scoreboard {
-        height: 80px;
-        width: 100%;
-        max-width: 350px;
-    }
-    .new .new-btn, .reset .reset-btn {
-        padding: 3vw 8vw;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #header {
-        font-size: 1.6rem;
-    }
-    .cell {
-        font-size: 4rem;
-    }
-    #scoreboard {
-        height: 80px;
-        width: 100%;
-        max-width: 300px;
-    }
-    .new .new-btn, .reset .reset-btn {
-        padding: 4vw 10vw;
-        font-size: 0.9rem;
     }
 }
