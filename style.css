@@ -12,22 +12,42 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 #main {
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2vh;
     transition: all 0.3s ease-in-out;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Header Styling */
+#header {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease-in-out;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .game {
-    height: 450px;
-    width: 450px;
-    background-color: #ffffff20;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 1;
+    background-color: #ffffff10;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -51,12 +71,13 @@ html, body {
 .row > div {
     height: 100%;
     width: calc(100% / 3);
-    border: 2px solid #f3efef;
+    border: 2px solid #ffffff30;
+    background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 .row > div:hover {
-    background-color: #ffffff30;
+    background-color: #3ab54a;
     transform: scale(1.1);
 }
 
@@ -74,13 +95,15 @@ html, body {
 }
 
 #scoreboard {
-    height: 100px;
-    width: 500px;
+    height: 80px;
+    width: 100%;
+    max-width: 450px;
     display: flex;
     padding: 1vw 2vw;
     background-color: #ffffff20;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-top: 20px;
 }
 
 #scoreboard div {
@@ -127,24 +150,45 @@ html, body {
     transform: translateY(-2px);
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-    #main {
-        gap: 4vh;
+    #header {
+        font-size: 1.8rem;
     }
     .game {
-        height: 330px;
-        width: 330px;
+        width: 100%;
+        max-width: 330px;
+        height: auto;
     }
     .cell {
         font-size: 5rem;
         font-weight: 500;
     }
     #scoreboard {
-        height: 100px;
-        width: 350px;
+        height: 80px;
+        width: 100%;
+        max-width: 350px;
     }
     .new .new-btn, .reset .reset-btn {
-        padding: 2vw 6vw;
+        padding: 3vw 8vw;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        font-size: 1.6rem;
+    }
+    .cell {
+        font-size: 4rem;
+    }
+    #scoreboard {
+        height: 80px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .new .new-btn, .reset .reset-btn {
+        padding: 4vw 10vw;
+        font-size: 0.9rem;
     }
 }
