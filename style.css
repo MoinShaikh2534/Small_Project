@@ -135,6 +135,7 @@ html, body {
     color: #ffffffc7;
 }
 
+/* Reset and New Game Button Styling */
 .new .new-btn, .reset .reset-btn {
     margin-top: 20px;
     padding: 0.5vw 2vw;
@@ -145,11 +146,37 @@ html, body {
     background-color: #ffeb3b;
     color: #121212;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite;
 }
+
 .new .new-btn:hover, .reset .reset-btn:hover {
     background-color: #fdd835;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
+}
+
+.new .new-btn:active, .reset .reset-btn:active {
+    animation: shake 0.2s ease;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
 }
 
 /* Responsive Styles */
