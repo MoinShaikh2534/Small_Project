@@ -148,7 +148,7 @@ html, body {
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s ease forwards;
 }
 
 .controls .reset-btn:hover {
@@ -168,7 +168,7 @@ html, body {
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    animation: bounce 1.5s;
+    animation: bounce 1.5s ease forwards;
 }
 
 .controls .new-btn:hover {
