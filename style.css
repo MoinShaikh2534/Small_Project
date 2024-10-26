@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
     width: 100%;
-    background: linear-gradient(135deg, hsl(117, 71%, 38%), hsl(117, 40%, 30%));
+    background: linear-gradient(135deg, hsl(200, 60%, 50%), hsl(210, 80%, 40%));
     color: #121212;
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -14,6 +15,7 @@ html, body {
     align-items: center;
     flex-direction: column;
 }
+
 #main {
     display: flex;
     justify-content: center;
